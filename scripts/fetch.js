@@ -8,7 +8,7 @@ verseChoose.onchange = function() {
 
 function updateDisplay(verse) {
     
-    var url = '/data/' + verse + '.txt';
+    var url = 'data/' + verse + '.txt';
     
     fetch(url)
         .then(
