@@ -1,0 +1,9 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    width: 500px;
+    margin: 0 auto;
+    background-color: #ccc;
+}
