@@ -1,13 +1,14 @@
 {
-  "squadName" : "Design Tech Académie",
-  "homeTown" : "Sainté City",
-  "formed" : 2017,
-  "secretBase" : "Super tower",
+  "equipe" : "Design Tech Académie",
+  "homeTown" : "Télécom Sainté",
+  "formed" : 2019,
+  "secretBase" : "Cité du Design",
   "active" : true,
   "members" : [
     {
       "name" : "Molecule Man",
       "age" : 29,
+      "gender" : "M",
       "secretIdentity" : "Dan Jukes",
       "powers" : [
         "Radiation resistance",
@@ -19,6 +20,7 @@
       "name" : "Madame Uppercut",
       "age" : 39,
       "secretIdentity" : "Jane Wilson",
+      "gender" : "F",
       "powers" : [
         "Million tonne punch",
         "Damage resistance",
@@ -41,10 +43,20 @@
       "name" : "Spider Man",
       "age" : 30,
       "secretIdentity" : "Peter Parker",
+      "gender" : "M",
       "powers" : [
         "Shooting spider waves",
         "Jumping high",
         "Climbing walls"
+      ]
+    },
+    {
+      "name" : "Inspecteur Gadget",
+      "age" : 54,
+      "secretIdentity" : "Denis Colombo",
+      "gender" : "M",
+      "powers" : [
+        "Gogo gadget au poing"
       ]
     }  
   ]

@@ -1,10 +1,15 @@
 var header = document.querySelector('header');
+
 var section = document.querySelector('section');
 
 var requestURL = 'data/heroes.json';
+
 var request = new XMLHttpRequest();
+
 request.open('GET', requestURL);
+
 request.responseType = 'json';
+
 request.send();
 
 request.onload = function() {
@@ -20,17 +25,18 @@ function populateHeader(jsonObj) {
   
     var myH1 = document.createElement('h1');
   
-    myH1.textContent = jsonObj.squadName;
+    myH1.textContent = jsonObj.equipe;
   
     header.appendChild(myH1);
   
     var myPara = document.createElement('p');
   
-    myPara.textContent = 'Hometown: ' + jsonObj.homeTown + ' // Formed: ' + jsonObj.formed;
+    myPara.textContent = 'Hometown: ' + jsonObj.homeTown 
+                            + ' // Formed: ' + jsonObj.formed
+                            + ' // Secret base: ' + jsonObj.secretBase;
   
     header.appendChild(myPara);
 }
-
 
 function showHeroes(jsonObj) {
   
@@ -47,6 +53,8 @@ function showHeroes(jsonObj) {
         var myPara2 = document.createElement('p');
         
         var myPara3 = document.createElement('p');
+
+        var myPara4 = document.createElement('p');
         
         var myList = document.createElement('ul');
         
@@ -69,11 +77,21 @@ function showHeroes(jsonObj) {
             myList.appendChild(listItem);
         }
 
+        if (heroes[i].gender) {
+        
+            myPara4.textContent = 'Gender: ' + heroes[i].gender;
+        }
+
         myArticle.appendChild(myH2);
         
         myArticle.appendChild(myPara1);
         
         myArticle.appendChild(myPara2);
+
+        if (heroes[i].gender) {
+        
+            myArticle.appendChild(myPara4);
+        }
         
         myArticle.appendChild(myPara3);
         
